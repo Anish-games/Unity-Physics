@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class Cube_Physics : MonoBehaviour
+public class Cube_Physics_collision : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(" collision detect");
+        if (collision.gameObject.CompareTag("Cube"))
+                { 
+            Debug.Log(" collision detect");
+        }
     }
 
     private void OnCollisionStay(Collision collision)
